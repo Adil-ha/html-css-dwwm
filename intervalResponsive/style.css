@@ -1,0 +1,21 @@
+body{
+    background:url(./d86bd391b8476c2308717c0948116a1e.jpeg);
+    /* background-position: center;
+    background-size: cover; */
+}
+/* @media (800px <= width <= 1000px) {
+    body{
+        background: red;
+    }
+  }
+  @media (1000px <= width <= 1200px) {
+    body{
+        background: yellow;
+    }
+  } */
+
+  @media (max-width: 800px){
+    body{
+        background: #848;
+        }
+}

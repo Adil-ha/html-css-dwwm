@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: Poppins;
+}
+body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: black;
+    animation: animBefore 1.5s ease forwards;
+    animation-delay: 0.15s;
+}    
+
+@keyframes animBefore {
+    to{
+        opacity: 0;
+    }
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background: gray;
+}
+.voiture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+.voiture h1 a{
+    color: black;
+    text-decoration: none;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul li{
+    padding: 10px;
+    z-index: 1000;
+}
+nav li a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+nav li a:hover{
+    color: red;
+}
+.headerimage{
+    background:url(../img/lumieres-voiture-avant-nuit-route_1303-17091.webp);
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+}
+/* ********************************section1********************************** */
+main{
+    padding: 20px;
+    background: gray;
+}
+.section1{
+    border-bottom: 1px solid black;
+    padding: 30px;
+}
+
+.container-section1{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.container-section1 div{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.section1 img{
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px -1px 8px 6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px -1px 8px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 8px 6px rgba(0,0,0,0.75);
+}
+
+/* ******************************section2****************************************** */
+
+.section2{
+    padding: 20px 50px;
+}
+
+.section2 article{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+article{
+    padding: 10px;
+}
+
+/* *********************************section3************************************** */
+.section3{
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section3 article{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* ***************************footer*************************** */
+footer{
+    background: black;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+}
+footer div a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+footer div a:hover{
+    color:red;
+}
+
+/* ***************************Responsive******************************** */
+@media screen and (max-width : 560px) {
+    header nav{
+        font-size: 0.6rem;
+    }
+    .container-section1,{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .container-section1 div{
+        margin: 20px 0;
+    }
+    .section3{
+        display: block;
+    }
+}
